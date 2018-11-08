@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorate="~{template}">
+	
+<head>
+<meta charset="utf-8"/>
+<title>Banque</title>
+</head>
+<body>
+
+<div layout:fragment="content" >
+		<div sec:authorize="hasRole('ROLE_ADMIN')" >
+		<div class="container">
+		
+				
+		
+		<div class="panel panel-success" >
+					<div class="panel-heading">Liste des Operation</div>
+					<div class="panel-body">
+						<table class="table table-striped">
+							<tr>
+								<th>Num</th><th>Type</th><th>Date</th><th>Montant</th>
+								</tr>
+							<tr th:each="o:${listeOperation}">
+								<td th:text="${o.numero}"></td>
+								<td th:text="${o.class.simpleName}"></td>
+								<td th:text="${o.dateOperation}"></td>
+								<td th:text="${o.montant}"></td>
+							</tr>
+						</table>
+						<div class="container">
+							<ul class="nav nav-pills nav-justified">
+								<li th:each="p,status:${pages}">
+									<a th:href="@{/Operation(page=${status.index},size=4)}" th:text="${status.index}"></a>
+							</ul>
+						</div>
+				</div>
+				
+				
+		</div>
+			
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Okta Account Chooser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x-my-okta-version" content="version: 1.20.0">
+<link href="a_data_004/okta-sign-in.css" rel="stylesheet"><script type="text/javascript" src="a_data_004/myOkta-0faba52fcd1468a5ac8d.js"></script></head>
+<body class="auth">
+
+  <div id="okta-account-chooser" class="auth-container main-container no-beacon" style="">
+    <div class="auth-header">
+      <img src="a_data_004/logo_okta.png" class="auth-org-logo">
+    </div>
+    <div id="add-account-form" class="auth-content">
+      <div class="auth-content-inner">
+        <div class="account-chooser">
+          <div data-se="o-form-content" class="o-form-content o-form-theme clearfix">
+            <h2 data-se="o-form-head" class="okta-form-title o-form-head signin-title signin-title-e2e">
+              Sign In
+            </h2>
+            <p class="okta-form-subtitle o-form-head signin-head">
+              Enter your Okta organization
+            </p>
+            <p class="okta-form-subtitle okta-form-footer signin-footer">
+              <strong>mycompany</strong>.okta.com
+            </p>
+            <div class="okta-form-input-field input-fix">
+              <table>
+                <tbody><tr>
+                  <td>
+                    <input placeholder="mycompany" name="subdomain" id="subdomain" class="subdomain subdomain-e2e" autocomplete="off" type="text">
+                  </td>
+                  <td>
+                    <div class="period">
+                      <div>
+                        .
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="select-container">
+                      <select id="okta-options" class="okta-dropdown-option okta-options-e2e">
+                        <option value="okta.com" selected="selected">
+                          okta.com
+                        </option>
+                        <option value="okta-emea.com">
+                          okta-emea.com
+                        </option>
+                        <option value="oktapreview.com">
+                          oktapreview.com
+                        </option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+          </div>
+          <div class="o-form-button-bar go-btn go-btn-e2e">
+            <input id="btn-account-sign-in" value="Go" class="button button-primary" type="submit">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="account-chooser-form" class="auth-content" style="display:none">
+      <div class="auth-content-inner">
+        <div data-se="o-form-content" class="o-form-content o-form-theme clearfix">
+          <h2 data-se="o-form-head" class="okta-form-title o-form-head">
+            Choose an account
+          </h2>
+          <div class="o-form-fieldset-container" data-se="o-form-fieldset-container">
+            <div id="accounts-content" class="accounts-content clearfix"></div>
+            <div class="add-account-content clearfix">
+              <a href="#" id="link-add-account" class="label" name="link-add-account">
+                <span class="icon icon-16 icon-only add-16-color"></span>
+                Add Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-container clearfix">
+      <p class="copyright">
+        Powered by <a class="inline-block notranslate" href="http://www.okta.com/">Okta</a>
+      </p>
+      <p class="privacy-policy">
+        <a class="inline-block margin-l-10" target="_blank" href="http://www.okta.com/privacy">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+  <script>new myOkta(window);</script><iframe id="account-chooser-iframe" src="a_data_004/iframe.html" style="display:none;"></iframe>
+
+
+</body></html>

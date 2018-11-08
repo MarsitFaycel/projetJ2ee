@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" type="text/css" href="../static/css/myStyle.css"
+th:href="@{/css/myStyle.css}"/>
+<title>la banque</title>
+</head>
+<body>
+	<head>
+	<header>
+		<div class="navbar navbar-default">
+			<div class="container-fluid">
+				<div sec:authorize="hasRole('ROLE_ADMIN')" >
+				<ul class="nav navbar-nav">
+					<li> <a th:href="@{/Operation}">Operation</a></li>
+					<li> <a th:href="@{/enregistrement}">Enregistrement</a></li>
+					<li> <a th:href="@{/clients}">Clients</a></li>
+				</ul>
+				</div>
+				<div sec:authorize="hasRole('ROLE_USER')" >
+				<ul class="nav navbar-nav">
+					
+					<li> <a th:href="@{/compte}">Comptes</a></li>
+					
+				</ul>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a th:text="${#httpServletRequest.remoteUser}"></a></li>
+					<li><a th:href="@{/login?logout}">quitter</a>
+				</ul>
+			</div>	
+		</div>
+		</header>
+		
+		<section layout:fragment="content"></section>
+		
+		
+		
+		<footer>
+		<div class="navbar-fixed-bottom">
+			<small>@adress </small>
+		</div>
+		</footer>
+	</head>
+</body>
+</html>

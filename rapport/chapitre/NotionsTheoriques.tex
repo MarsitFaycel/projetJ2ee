@@ -1,0 +1,61 @@
+\documentclass[../rapportdestage.tex]{subfiles}
+
+ 
+\begin{document}
+ 
+
+
+\section{Notions théoriques}
+	\subsection{Java Entreprise Edition (J2EE)}
+Le langage Java, développé par Sun, est un langage orienté objet, en effet il possède un
+mécanisme qui permet de décrire les caractéristiques d'un objets de façon unique et de
+pouvoir lui faire subir des opérations.
+
+Le langage Java n'est pas interprété mais les fichiers java, appelés portant l'extension
+.java, sont compilés en byte code, fichier .class, puis lus par ce que l'on appelle une
+machine virtuelle Java (JVM).
+
+ Le langage est donc indépendant de chaque machine, on
+parle de langage portable.
+
+Pour écrire du Java, il suffit d'installer un JRE(Java Runtime Environement) ou un
+JDK(Java Developpement Kit) qui comprend un JRE et d'autre outils, une JVM et un simple éditeur de texte.
+
+JEE, qui peut être considéré comme une extension de Java, est un ensemble de
+spécifications destinées aux applications d'entreprises. Ce langage permet la création
+d'applications performantes et robustes.
+
+JEE s'appuie sur le modèle Modèle Vue Contrôleur (MVC)		
+	
+		
+	\subsection{Architecture (MVC)}
+Il est primordiale à la conception de tout système informatique de choisir le modèle d’architecture
+qui lui sera adéquat pouvant assurer un bon fonctionnement, des meilleurs performances ainsi que
+la réutilisation et l’interconnexion fiable de ce système avec d’autres. 
+
+Nous avons choisi le modèle
+MVC « Model View Controller » comme notre modèle architectural qui est adapté particulièrement
+à la création des applications Web. Un avantage apporté par ce modèle est la clarté de l’architecture
+qu’il impose.
+
+Cela simplifie la tâche du développeur qui tenterait d’effectuer une maintenance ou une
+amélioration sur le projet et la diminution de la complexité lors de la conception.
+Cette méthode différentie trois parties dans une application web qui sont :
+\begin{itemize}
+\item vues : Ensembles de fichiers responsables de la génération du HTML, en bref, c’est l’interface Homme-Machine de l’application 
+\item modèles : Présentent des fonctions qui aident à récupérer, insérer et mettre à jour des informations de la base de données
+\item  contrôleurs : Des fichiers qui agissent sur les données et effectue la synchronisation entre le modèle et la vue.
+\end{itemize}
+
+	\subsection{Architecture 3-tiers}
+	Dans l'architecture 3-tiers (tiers signifiant étages en
+anglais) il existe un niveau intermédiaire, c'est-à-dire que l'on a généralement une architecture partagée entre:
+
+1. Le client: le demandeur de ressources
+
+2. Le serveur d'application (appelé aussi middleware): le serveur chargé de fournir la ressource mais faisant appel à un autre serveur
+
+3. Le serveur secondaire (généralement un serveur de base de données), fournissant un
+service au premier serveur.
+	
+	\end{document}

@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorate="~{template}">
+	
+<head>
+<meta charset="utf-8"/>
+<title>Banque</title>
+</head>
+<body>
+	<div layout:fragment="content" >
+		
+		<div class="col-md-6" >
+		
+			<div class="panel panel-success" th:if="${Cl1}">
+					<div class="panel-heading" >Enregistrement de nouveau clinet</div>
+					<div class="panel-body">
+						
+							<div class="form-group">
+									<label >identifiantClient</label>
+									<label th:text="${Cl1.identifiantClient}"></label>
+							</div>
+							<div class="form-group">
+									<label >nom</label>
+									<label th:text="${Cl1.nomClient}"></label>
+							</div>
+							<div class="form-group">
+									<label >prenomClient</label>
+									<label th:text="${Cl1.prenomClient}"></label>
+							</div>
+							<div class="form-group">
+									<label >adresse</label>
+									<label th:text="${Cl1.adresse}"></label>
+							</div>
+<!-- 							<div class="form-group"> -->
+<!-- 									<label >dateDeNaissanse</label> -->
+<!-- 									<label th:text="${Cl1.dateDeNaissanse}"></label> -->
+<!-- 							</div> -->
+							
+							<div class="form-group">
+									<label >ville</label>
+									<label th:text="${Cl1.ville}"></label>
+							</div>
+							<div class="form-group">
+									<label >codePostale</label>
+									<label th:text="${Cl1.codePostale}"></label>
+							</div>
+							<div class="form-group">
+									<label >email</label>
+									<label th:text="${Cl1.email}"></label>
+							</div>
+<!-- 							<div> -->
+<!-- 								<button type="button" class="btn btn-success"><a th:href="@{/clients}"></a>OK</button> -->
+<!-- 								<button type="reset" class="btn btn-success"><a th:href="@{/clients}"></a>reset</button> -->
+<!-- 							</div> -->
+						
+					</div>
+			</div>
+			</div>
+					
+		</div>
+
+
+</body>
+</html>

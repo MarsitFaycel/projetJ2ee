@@ -1,0 +1,196 @@
+\documentclass[../rapportdestage.tex]{subfiles}
+\begin{document}
+
+
+
+%erreur Package inputenc Error: Unicode char ﬁ (U+FB01)===> fi or if 
+
+
+
+\section{Environement de stage}
+	\subsection{Présentation de l’organisme d’accueil}
+		\subsubsection{Présentation générale de la société Tritux}
+
+ Tritux est un éditeur international de solutions à forte valeur ajoutée, spécialisé dans l’ingénierie logicielle, le consulting et les services IT. Présent sur la Tunisie que sur l’international, Tritux propose  une large gamme de solutions IT pour les secteurs Telecom , finances et industries.
+
+Taille de l'entreprise :    Entre 20 et 100 employés
+
+Catégorie :    Société privée locale
+
+Année de fondation :    2006
+
+Adresse :  9 rue Niger 1002 Mont Plaisir, Tunis, Centre ville, Tunis, 1002 Tunisie 
+
+Certification: ISO 9001 : 2008-ISTQB – ITIL-Redhat- Java
+
+
+
+%source http://www.tritux.com/site/fr/article.3.html
+
+			 \subsubsection{Services de la société Tritux}
+			 Tritux offre des services d’ingénierie en recherche et développement couvrant divers secteurs:
+\begin{spacing}{1}			 
+\begin{itemize}
+	\item Outsourcing
+	\item Ingénierie Logicielle
+	\item Consulting Redhat Jboss
+	\item Intégration
+	\item Assistance
+\end{itemize}
+\end{spacing}
+
+		\subsubsection{Principaux produits de TriTux}
+		
+		\begin{itemize}
+			\begin{spacing}{1}
+			\item Communication et messagerie:TUX fax / SMGS / Easybulk / mobimix / mobads
+			\item Roaming Suite: Bill Shock Preventer/Border Roaming Controller/Inbound Roamers Retention/Traffic Steering/Welcome SMS
+			\item VAS:Mobimix / SOS crédit / Easybulk / Simplus / SMGS / Mobads
+			\item Mobile Banking:Mobibank
+			\item Mobile Marketing:Podbridge / Simplus
+			\item  Solution IT:Fidelcom / Simcom / SOS crédit
+			\end{spacing}
+		
+		\end{itemize}
+
+
+\clearpage
+
+
+
+
+
+
+
+
+	\subsection{Environement du travail et outis utilisés}
+		
+		
+	\subsubsection{Eclipse IDE}		
+
+    \begin{wrapfigure}[4]{r}{3cm}
+
+\includegraphics[width=2.5cm]{logoEclipse.png}
+ 
+  
+\end{wrapfigure}
+
+%\includegraphics[scale=1]{../image/logoEclipse.png} 		
+	
+	Eclipse est un environnement de développement principalement écrit en
+Java et conçu pour le développement d'applications Java.
+ IL est un environnement extensible car il possède de nombreux plug-ins dont
+un qui nous intéresse plus particulièrement Spring Tool Suite (STS) .
+		
+
+
+		
+				
+		
+	
+		
+		
+		\subsubsection{Spring MVC}
+		
+   \begin{wrapfigure}[4]{hr}{3cm}
+
+\includegraphics[width=2cm]{sts.png}
+  \end{wrapfigure}
+	
+		Spring :c’est un Framework de développement des applications java. Il est similaire à un serveur d’application JEE.la figure  illustre les composants modulaire de Spring
+		Grace à ses modules Spring assure plusieurs fonctionnalités :
+		\begin{itemize}
+\item Spring Core : permet d’implémenter l’injection d’indépendance,
+\item Spring AOP : destinée à la programmation oriente aspect,
+\item Spring ORM : permet une intégration de Framework de mapping O/R,
+\item Spring DAO : permet de faciliter le développement de couche d’accès aux données en JDBC
+pur,
+\item Spring Web : assurer l’utilisation de Spring dans une application web,
+\item Spring MVC : le développement d’une application web basé sur le design pattern MVC.
+		
+			
+		
+		\end{itemize}
+Parmi les bonnes pratiques de Spring nous citons Spring Data et Spring Security. En fait nous
+utilisons Spring Security pour garantir les droits d’accès ainsi que Spring Data pour faciliter l’accès
+aux données.
+\clearpage
+		\subsubsection{xampp}
+		
+    \begin{wrapfigure}[4]{r}{3cm}
+
+\includegraphics[width=2cm]{xampp.png}
+  
+  
+\end{wrapfigure}
+		XAMPP (X (cross), Apache, MariaDB, Perl, PHP) est un environnement de
+développement de type WAMP (Windows, Apache, MySQL, PHP) permettant la mise
+en place d'un serveur web local, d'un serveur FTP, et d'un serveur de messagerie
+électronique. Il s'agit d'une distribution de logiciels libres.
+		\subsubsection{Apache Tomcat}
+			
+    \begin{wrapfigure}[4]{r}{3cm}
+
+\includegraphics[width=2cm]{apacheTomcat.jpeg}
+  
+ 
+  
+\end{wrapfigure}
+	Tomcat 5.5, conçu par la fondation Apache, est un serveur
+d'applications, un conteneur de servlet JEE. Tomcat inclut un serveur
+HTTP (Hyper Text Transfert Protocole) interne.	
+		
+		\subsubsection{Maven}
+		
+    \begin{wrapfigure}[4]{r}{3cm}
+
+\includegraphics[width=2cm]{maven.jpeg}
+ 
+  
+\end{wrapfigure}
+	Maven est un outil « open-source »pour la gestion et l’automatisation de
+production des projets logiciels Java. Il nous permet de produire un logiciel à
+partir de ses sources, en optimisant les taches réalisées à cette fin et en garan-
+tissant le bon ordre de fabrication. Maven utilise une approche déclarative, où la
+structure et le contenu du projet sont décrits, plutôt qu’une approche par tâche
+utilisée par exemple par les fichiers « make »traditionnels. Cela aCela aide à mettre
+en place des standards de développements et réduit le temps nécessaire pour
+écrire et maintenir les scripts de « build ».
+
+Cet outil utilise un paradigme connu sous le nom de POM (Project Object
+Model) afin de décrire un projet logiciel, ses dépendances avec des modules
+externes et l’ordre à suivre pour sa production. Il est livré avec un grand
+nombre de taches prédéfinies, comme la compilation du code Java ou encoresa modularisation.
+Maven nous permet de gérer les dépendances entre les modules constituant
+notre projet ainsi que les bibliothèques dont il dépend.
+ Il nous offre aussi la possibilité d’automatiser les différentes tâches et ainsi nous aurons la possibilité de générer automatiquement des tests unitaires. C’est donc un outil très riche
+qui facilite le développement des projets.
+	\subsubsection{Thymeleaf}
+	
+    \begin{wrapfigure}[4]{r}{3cm}
+
+\includegraphics[width=2cm]{thymeleaf.png}
+ 
+  
+\end{wrapfigure}	
+	Thymeleaf est un moteur de template. Il écrit en Java pouvant générer du XML/XHTML/HTML5.
+Thymeleaf peut être utilisé dans un environnement web (utilisant l’API Servlet) ou non web.
+Il apporte le concept de templates naturels en utilisant des attributs HTML spécifiques et non
+intrusif.
+
+Son but principal est d’être utilisé dans un environnement web pour la génération de vue pour les
+applications web basées sur le modèle MVC	
+	
+	\subsubsection{Bootstrap}
+	
+    \begin{wrapfigure}[4]{r}{3cm}
+
+\includegraphics[width=2cm]{bootstrap.png}
+  
+  
+\end{wrapfigure}
+	Bootstrap est un Framework utile pour la création de sites et d’applications web. C’est l’un des projets le plus populaires sur la plate-forme de gestion de développement GitHub. Bootstrap est une collection de codes HTML et CSS, des formulaires, boutons, outils de navigation et autres éléments interactifs
+	
+	
+	
+	\end{document}

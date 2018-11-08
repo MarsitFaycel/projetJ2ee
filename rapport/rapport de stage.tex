@@ -1,0 +1,203 @@
+\documentclass[a4paper,12pt,french]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{subfiles}
+\usepackage{subcaption}
+
+
+\usepackage{babel}
+%graphic
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\graphicspath{{image/}{../image/ }}
+\usepackage[margin=25mm,includehead, includefoot]{geometry}
+\usepackage{fancybox}
+
+
+%header and footer
+%==============================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+
+%============================
+
+
+
+%autor
+\usepackage{titling}
+\title{RAPPORT DE
+STAGE D’INITIATION}
+%%%% AUTOR
+\author{Faysel MARSIT}
+%%%%%%%%%%%%%%%%
+%%%%%% DIRECTOR DEL TRABAJO
+%%%%%%% Cambiar el nombre siguiente
+\newcommand{\director}{Mehdi Chagraoui}
+%=====================================
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	%%%%bordure de page
+		\fancypage{}{\fboxrule=1pt\fbox}
+	%%%%================
+
+
+%page de garde
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	
+
+
+
+		\begin{center}
+		
+{\fontfamily{phv}\fontsize{12}{16}\selectfont{Ministère de l’enseignement supérieur et de la recherche scientifique}}\\
+[1em]
+{\fontfamily{phv}\fontsize{12}{16}\selectfont{Ecole Polytechnique Internationale Privée de Tunis}}\\
+[1em]
+\includegraphics[scale=2]{image/logo.png} 
+\vspace*{2cm}
+
+
+{\fontfamily{phv}\fontsize{26}{5}\selectfont{\thetitle\ }}\\	
+[1cm]			
+		\LARGE{Filiére et Niveau : IRM 1}\\
+[1em]		
+		\LARGE{Organisme d’accueil : TRITUX}	\\
+		
+		\includegraphics[scale=0.5]{image/logotritux.jpeg} 
+			
+		
+			\LARGE
+			\textit{Elaboré par \hspace{6cm} Encadré par }\\
+			 \textsc{\theauthor \hspace{3cm} \director}\\ 
+	
+			\vspace*{1cm}
+						
+	\LARGE{Période : du  01/07/2018  au  31/07/2018}\\
+	
+	\vfill
+	{\fontfamily{phv}\fontsize{16}{5}\selectfont{Année Universitaire 2017/2018}}\\
+
+	
+	
+	\end{center}
+			
+
+	
+\end{titlepage}
+%%%%%%%%%fin page de garde%%%%%%%%%
+\clearpage
+\fancypage{}{}
+\renewcommand{\headrulewidth}{2pt}
+\fancyhead[L]{\footnotesize{ \thetitle}}
+\fancyhead[R]{\includegraphics[scale=1.5]{image/logo.png} }
+
+\renewcommand{\footrulewidth}{2pt}
+\fancyfoot[L]{\footnotesize \theauthor}
+\fancyfoot[R]{\footnotesize  \thepage}
+%front
+
+
+\pagenumbering{roman}
+\vspace*{2cm}
+
+
+
+
+\section*{Remerciement}
+   % \addcontentsline{toc}{section}{\numberline{}Remerciement}
+Je tiens à remercier toutes les personnes   qui ont contribué au succès de mon stage.
+
+Tout d'abord, j'adresse mes remerciements à mon camarade, Mohamed BOUDEN qui m'a aidé dans ma recherche de stage et  de postuler dans cette entreprise.
+
+Je tiens à remercier vivement mon maitre de stage, \director , ingénieur informatique , pour ses conseils et le partage de son expertise au quotidien .
+
+Je remercie également toute l’équipe de TRITUX pour leur accueil .
+
+\clearpage
+
+%table de matiere toc
+\begin{spacing}{1}	
+\tableofcontents
+\end{spacing}
+\thispagestyle{empty}
+\clearpage
+%---------------------------
+
+%table de figure
+\listoffigures
+\addcontentsline{toc}{section}{\numberline{}Table des figures}
+%---------------------------
+
+\clearpage
+
+
+
+\pagenumbering{arabic}
+
+
+%%%%%%%%page1%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\setcounter{page}{1}
+
+
+\subfile{chapitre/introduction}
+
+
+\newpage
+
+
+\subfile{chapitre/environementDeStage}
+\newpage
+\subfile{chapitre/NotionsTheoriques}
+
+\newpage
+\subfile{chapitre/travailRealise}
+
+
+
+\newpage
+\subfile{chapitre/conclusion}
+
+\newpage
+\renewcommand\refname{Netographie}
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}{\numberline{}Netographie}
+\bibitem{Latex} 
+Sharelatex: \texttt{https://www.sharelatex.com/learn}
+
+\bibitem{Overleaf}
+Overleaf \texttt{https://www.overleaf.com/}
+
+\bibitem{StarUml}
+StarUml: \texttt{https://docs.staruml.io/}
+
+\bibitem{Spring}
+Spring: \texttt{https://spring.io/guides}
+
+\bibitem{Stackoverflow}
+stackoverflow: \texttt{https://stackoverflow.com/}
+
+\bibitem{bootstrap}
+Bootstrap: \texttt{http://getbootstrap.com/docs/}
+
+\bibitem{thymeleaf}
+Thymeleaf : \texttt{https://www.thymeleaf.org/documentation/}
+\end{thebibliography}
+
+
+
+\end{document}

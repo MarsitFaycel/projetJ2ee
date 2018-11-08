@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorate="~{template}">
+	
+<head>
+<meta charset="utf-8"/>
+<title>Banque</title>
+</head>
+<body>
+	<div layout:fragment="content" >
+		<div class="col-md-6">
+		
+			<div class="panel panel-primary">
+					<div class="panel-heading">Clients</div>
+					<div class="panel-body">
+						<form th:action="@{/infoClient}" method="get">
+							<div>
+								<label>code Cpte:</label>
+								<input type="text" name="cclient" th:value="${cclient}"/>
+								<button type="submit" class="btn btn-primary">OK</button>
+							</div>
+						<div class="text-danger" th:if="${exception1}" th:text="${exception1.message}">
+						</div>
+						</form>
+						
+				</div>
+			</div>
+			<div class="panel panel-success" th:if="${client1} ">
+					<div class="panel-heading">Information sur le compte</div>
+					<div class="panel-body">
+						<div>
+							<label>Code:</label>
+							<label th:text="${client1.identifiantClient}"></label>
+						</div>
+						<div>
+							<label>nom</label>
+							<label th:text="${client1.nomClient}"></label>
+						</div>
+						<div>
+							<label>prenom</label>
+							<label th:text="${client1.prenomClient}"></label>
+						</div>
+						<div>
+							<label>adresse</label>
+							<label th:text="${client1.adresse}"></label>
+						</div>
+						<div>
+							<label>dateDeNaissanse</label>
+							<label th:text="${client1.dateDeNaissanse}"></label>
+						</div>
+						<div>
+							<label>ville</label>
+							<label th:text="${client1.ville}"></label>
+						</div>
+						<div>
+							<label>codePostale</label>
+							<label th:text="${client1.codePostale}"></label>
+						</div>
+						<div>
+							<label>email</label>
+							<label th:text="${client1.email}"></label>
+						</div>
+					
+				
+						<table class="table table-striped">
+							<tr>
+								<th>Num</th><th>Type</th><th>Date</th><th>Montant</th>
+								</tr>
+							<tr th:each="o:${listeCompte}">
+								<td th:text="${o.codeCompte}"></td>
+								<td th:text="${o.class.simpleName}"></td>
+								<td th:text="${o.dateCreation}"></td>
+								<td th:text="${o.solde}"></td>
+							</tr>
+						</table>
+				</div>
+			</div>
+							
+		</div>
+						
+		
+</div>
+
+</body>
+</html>
